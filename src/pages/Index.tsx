@@ -83,7 +83,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto fade-in-on-scroll">
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-card mb-8 animate-glow">
               <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
-              <span className="text-sm text-slate-300">Building the future of habit transformation</span>
+              <span className="text-sm text-slate-300">Building the future transformation</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -93,7 +93,7 @@ const Index = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-              We build human-centered software to make everyday change achievable.
+              We build software to make everyday change achievable.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -125,11 +125,11 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center fade-in-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 gradient-text">
-              Empowering Human Potential
+              Empowering Your True Potential
             </h2>
             <p className="text-lg text-slate-300 mb-12 leading-relaxed">
               At Alpha Corp, we believe that small, consistent changes lead to extraordinary transformations. 
-              Our mission is to create technology that understands human psychology and makes positive change not just possible, but inevitable.
+              Our mission is to create tools and technology that understands your true potential and makes positive change not just possible, but inevitable.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -137,7 +137,7 @@ const Index = () => {
                 <CardContent className="p-8 text-center">
                   <Heart className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-3 text-white">Human-Centered</h3>
-                  <p className="text-slate-400">Every feature designed with empathy and understanding of human behavior.</p>
+                  <p className="text-slate-400">Every feature designed to unlock your true potential.</p>
                 </CardContent>
               </Card>
               
@@ -145,7 +145,7 @@ const Index = () => {
                 <CardContent className="p-8 text-center">
                   <Zap className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-3 text-white">Cutting-Edge Tech</h3>
-                  <p className="text-slate-400">Leveraging the latest in AI and behavioral science for maximum impact.</p>
+                  <p className="text-slate-400">Leveraging the latest technology for maximum impact.</p>
                 </CardContent>
               </Card>
               
@@ -170,13 +170,13 @@ const Index = () => {
               Products Coming Soon
             </h2>
             <p className="text-lg text-slate-300 mb-12">
-              We're crafting revolutionary tools that will transform how you approach personal change. 
-              Be the first to experience the future of habit formation.
+              We're crafting revolutionary tools that will transform how you interact with technology. 
+              Be the first to experience the future of productivity.
             </p>
             
             <div className="glass-card rounded-2xl p-8 max-w-md mx-auto mb-8">
               <h3 className="text-2xl font-semibold mb-4 text-white">Join Our Waitlist</h3>
-              <p className="text-slate-400 mb-6">Get exclusive early access and be part of the beta community.</p>
+              <p className="text-slate-400 mb-6">Get exclusive early access.</p>
               
               <form onSubmit={handleWaitlistSignup} className="space-y-4">
                 <Input
@@ -211,7 +211,7 @@ const Index = () => {
               Let's Connect
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-              Have a question or want to collaborate? We'd love to hear from you.
+              Have a question? We'd love to hear from you.
             </p>
             
             <div className="glass-card rounded-2xl p-8">
@@ -241,7 +241,6 @@ const Index = () => {
             </div>
             <div className="text-slate-400 text-center md:text-right">
               <p>&copy; 2024 Alpha Corp. All rights reserved.</p>
-              <p className="text-sm mt-1">Building software to change habits and improve lives.</p>
             </div>
           </div>
         </div>

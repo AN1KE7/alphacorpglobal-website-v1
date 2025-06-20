@@ -1,6 +1,5 @@
-
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Mail, Sparkles, Heart, Zap, Users, ChevronDown } from 'lucide-react';
+import { ArrowRight, Mail, Sparkles, Heart, Zap, Users, ChevronDown, LinkedinIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
@@ -128,8 +127,8 @@ const Index = () => {
               Empowering Your True Potential
             </h2>
             <p className="text-lg text-slate-300 mb-12 leading-relaxed">
-              At Alpha Corp, we believe that small, consistent changes lead to extraordinary transformations. 
-              Our mission is to create tools and technology that understands your true potential and makes positive change not just possible, but inevitable.
+            At Alpha Corp, we believe that small, consistent changes lead to extraordinary transformations. 
+            Our mission is to create tools and technology that understands your productivity goals and makes positive change not just possible, but inevitable.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -207,9 +206,7 @@ const Index = () => {
       <section id="contact" className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center fade-in-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 gradient-text">
-              Let's Connect
-            </h2>
+            
             <p className="text-lg text-slate-300 mb-8">
               Have a question? We'd love to hear from you.
             </p>
@@ -217,7 +214,7 @@ const Index = () => {
             <div className="glass-card rounded-2xl p-8">
               <div className="flex items-center justify-center space-x-4 mb-6">
                 <Mail className="w-6 h-6 text-purple-400" />
-                <span className="text-xl text-white">founder@alphacorp.global</span>
+                <span className="text-xl text-white">hello@alphacorp.global</span>
               </div>
               
               <Button 
@@ -235,12 +232,24 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-slate-800 py-12">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-2xl font-bold gradient-text mb-4 md:mb-0">
-              Alpha Corp
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+            <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
+              <div className="text-2xl font-bold gradient-text">Alpha Corp</div>
+              <div className="flex items-center gap-2 mt-2">
+                <span className="text-slate-400 text-sm">Follow us on</span>
+                <a
+                  href="https://www.linkedin.com/company/alpha-corp-global"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Alpha Corp LinkedIn"
+                  className="inline-flex items-center justify-center rounded-full p-2 hover:bg-slate-800 transition-colors"
+                >
+                  <LinkedinIcon className="w-6 h-6 text-blue-500 hover:text-blue-400 transition-colors" />
+                </a>
+              </div>
             </div>
             <div className="text-slate-400 text-center md:text-right">
-              <p>&copy; 2024 Alpha Corp. All rights reserved.</p>
+              <p>&copy; 2025 Alpha Corp. All rights reserved.</p>
             </div>
           </div>
         </div>

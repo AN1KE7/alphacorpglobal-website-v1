@@ -5,6 +5,8 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/waitlist';
+
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
@@ -27,17 +29,40 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleWaitlistSignup = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleWaitlistSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const email = formData.get('email') as string;
-    
-    if (email) {
-      toast({
-        title: "Thanks for joining our waitlist!",
-        description: "We'll notify you when our products are ready.",
+
+    if (!email) return;
+
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
       });
-      (e.target as HTMLFormElement).reset();
+
+      if (res.ok) {
+        toast({
+          title: "Thanks for joining our waitlist!",
+          description: "We'll notify you when our products are ready.",
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        const data = await res.json();
+        toast({
+          title: "Error",
+          description: data.error || "Something went wrong.",
+          variant: "destructive",
+        });
+      }
+    } catch (err) {
+      toast({
+        title: "Network Error",
+        description: "Could not connect to the server.",
+        variant: "destructive",
+      });
     }
   };
 

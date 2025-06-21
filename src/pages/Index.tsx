@@ -6,7 +6,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/waitlist';
+const API_URL = import.meta.env.VITE_API_URL 
+// const API_URL= ' http://localhost:5000/api/waitlist';
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -240,7 +241,7 @@ const Index = () => {
               
               <Button 
                 className="glow-button bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white px-8 py-3 rounded-xl transition-all duration-300"
-                onClick={() => window.location.href = 'mailto:founder@alphacorp.global'}
+                onClick={() => window.location.href = 'mailto:hello@alphacorp.global'}
               >
                 Send Email
                 <ArrowRight className="ml-2 w-4 h-4" />

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
+import axios from 'axios';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/waitlist';
 
@@ -37,30 +38,25 @@ const Index = () => {
     if (!email) return;
 
     try {
-      const res = await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
+      const res = await axios.post(API_URL, { email });
 
-      if (res.ok) {
+      if (res.status === 200 || res.status === 201) {
         toast({
           title: "Thanks for joining our waitlist!",
           description: "We'll notify you when our products are ready.",
         });
         (e.target as HTMLFormElement).reset();
       } else {
-        const data = await res.json();
         toast({
           title: "Error",
-          description: data.error || "Something went wrong.",
+          description: res.data?.error || "Something went wrong.",
           variant: "destructive",
         });
       }
-    } catch (err) {
+    } catch (err: any) {
       toast({
         title: "Network Error",
-        description: "Could not connect to the server.",
+        description: err.response?.data?.error || "Could not connect to the server.",
         variant: "destructive",
       });
     }
